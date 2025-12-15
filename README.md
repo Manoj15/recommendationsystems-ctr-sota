@@ -1,7 +1,25 @@
 # RecommendationSystems_Criteo_SOTA
-Experimenting SOTA Recommnedation Algorithms on Criteo Benchmarking Dataset
+Experimenting SOTA Recommnedation Algorithms on Microsoft News Dataset (MIND) Benchmarking Dataset
 
+🚀 Project Overview
 
+This project provides a systematic comparison of state-of-the-art recommendation algorithms using a realistic, content-rich benchmarking dataset. The goal is to understand how different classes of recommender systems address specific gaps in modern recommendation pipelines, including personalization, ranking quality, cold-start, sequential behavior modeling, and content understanding.
+
+Rather than proposing a single model, this project takes a benchmarking-first approach, evaluating representative algorithms from multiple paradigms—collaborative filtering, deep learning–based recommenders, sequence models, graph-based methods, and text-aware / LLM-enhanced approaches—under a unified experimental framework.
+
+🎯 Motivation
+
+Modern recommendation systems operate under diverse and often competing constraints, such as sparse user feedback, rapidly changing user intent, rich item content, and the need for accurate ranking under exposure bias. No single algorithm performs best across all scenarios.
+
+This project aims to:
+
+Identify key gaps in recommendation systems (e.g., cold-start, long-term vs. short-term interest modeling, content utilization, ranking under impressions)
+
+Evaluate how different algorithm families address these gaps
+
+Highlight trade-offs between model complexity, data requirements, and performance
+
+By grounding all experiments in the same benchmarking dataset, the comparisons remain fair, reproducible, and practically relevant.
 
 📊 Dataset Overview
 
@@ -44,3 +62,21 @@ Evaluating ranking models using click vs. non-click impressions
 Studying user interest evolution over time
 
 Benchmarking content-aware and hybrid recommendation architectures
+
+🧠 What This Project Covers
+
+Classical and neural collaborative filtering methods
+
+Sequential and session-based recommenders
+
+Content-aware and hybrid recommendation models
+
+Attention-based and Transformer-style architectures
+
+LLM-assisted representation learning and ranking
+
+Each model is evaluated with respect to the specific recommendation gap it is designed to address, rather than purely on aggregate metrics.
+
+📌 Goal
+
+The ultimate goal of this project is to serve as a practical reference and benchmarking guide for researchers and practitioners seeking to understand which recommendation algorithms work best under which conditions, and why.
