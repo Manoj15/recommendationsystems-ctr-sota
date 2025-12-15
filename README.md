@@ -1,4 +1,4 @@
-# RecommendationSystems_Criteo_SOTA
+# RecommendationSystems CTR SOTA using MIND Benchmark Dataset
 Experimenting SOTA Recommnedation Algorithms on Microsoft News Dataset (MIND) Benchmarking Dataset
 
 🚀 Project Overview
