@@ -116,3 +116,51 @@ Each model is evaluated **with respect to the specific recommendation gap it is 
 The ultimate goal of this project is to serve as a **practical reference and benchmarking guide** for researchers and practitioners seeking to understand:
 
 > **Which recommendation algorithms work best under which conditions — and why.**
+
+# MIND Dataset – Quick Start
+
+## 1. Create folders
+```bash
+mkdir -p data/raw data/processed
+```
+
+## 2. Download dataset (MINDsmall)
+```bash
+python -m src.mind.download_mind --size small --out data/raw
+```
+
+## 3. Verify files
+```bash
+ls data/raw/MINDsmall_train/MINDsmall_train
+```
+Expected:
+```
+news.tsv
+behaviors.tsv
+```
+
+## 4. Preprocess (TSV → Parquet)
+### Train
+```bash
+python -m src.mind.preprocess_mind   --raw_dir data/raw/MINDsmall_train/MINDsmall_train   --out_dir data/processed/mind_small_train
+```
+
+### Dev
+```bash
+python -m src.mind.preprocess_mind   --raw_dir data/raw/MINDsmall_dev/MINDsmall_dev   --out_dir data/processed/mind_small_dev
+```
+
+## 5. Smoke test PyTorch dataset
+```bash
+python train.py
+```
+
+Expected output shapes:
+- history_idxs: [B, H]
+- candidate_idxs: [B, 1+K]
+- labels: [B, 1+K]
+
+## 6. Switch to MINDlarge (optional)
+```bash
+python -m src.mind.download_mind --size large --out data/raw
+```
